@@ -34,8 +34,9 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: blue;
+    color: rgb(255, 0, 34);
     text-decoration: none;
+    text-transform: capitalize;
 
 }
 
@@ -60,6 +61,10 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+.title-view{
+  text-align: center;
+  color: tomato;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */

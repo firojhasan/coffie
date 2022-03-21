@@ -3,7 +3,8 @@
 <head>
 <title>CSS Template</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">s
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,17 +15,36 @@
 <section>
   <nav>
     <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
+      <li><a href="#">home</a></li>
+      <li><a href="?f=about">about</a></li>
+      <li><a href="?f=contact">contact</a></li>
+      <li><a href="?f=service">service</a></li>
+      <li><a href="?f=blog">blog</a></li>
+      <li><a href="?f=account_support">account support</a></li>
+      <li><a href="?f=sucurity">sucurity</a></li>
+      <li><a href="?f=product">Product</a></li>
+      <li><a href="?f=admin">admin</a></li>
+
     </ul>
   </nav>
-  
   <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
+  
+  <?php
+            if(isset($_GET['f'])){
+              if(file_exists($_GET['f'].'.php')){
+                print("<h1 class='title-view'>".ucwords($_GET['f'])."<h1>");
+                include_once($_GET['f'].'.php');
+              }else{
+                print("<h1 class='title-view'> sucutity warning</h1>");
+                include_once('sucurity.php'); 
+              }
+            
+            }
+            else{
+                echo "<h1>Home page</h1>";
+            }
+        ?>
+        </article>
 </section>
 
 <footer>
