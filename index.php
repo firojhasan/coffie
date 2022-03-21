@@ -21,7 +21,6 @@
       <li><a href="?f=service">service</a></li>
       <li><a href="?f=blog">blog</a></li>
       <li><a href="?f=account_support">account support</a></li>
-      <li><a href="?f=sucurity">sucurity</a></li>
       <li><a href="?f=product">Product</a></li>
       <li><a href="?f=admin">admin</a></li>
 
